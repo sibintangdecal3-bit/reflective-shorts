@@ -27,15 +27,26 @@
     const output = document.getElementById("hasil");
 
     if (input.value.trim() === "") {
-      output.innerText = "Tulis dulu idenya...";
+      output.classList.remove("hidden");
+      output.innerText = "Tulis dulu idenya. Satu kalimat saja cukup.";
       return;
     }
 
+    const ide = input.value.trim();
+
+    output.classList.remove("hidden");
     output.innerText =
-      "Kadang, " +
-      input.value +
-      ". Tapi yang jarang disadari, diam mereka adalah cara bertahan. Bukan karena lemah, tapi karena terlalu sering diminta kuat.";
+`Kadang, ${ide}.
+
+Bukan karena tidak ingin bicara.
+Tapi karena lelah menjelaskan
+hal yang sering dianggap sepele.
+
+Tidak semua diam berarti menyerah.
+Sebagian hanya sedang bertahan
+dengan caranya sendiri.`;
   }
 </script>
+
 </body>
 </html>
