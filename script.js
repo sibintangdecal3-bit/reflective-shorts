@@ -1,4 +1,6 @@
-const button = document.getElementById("generateBtn");
+<script>
+  function generate() {
+   const button = document.getElementById("generateBtn");
 const input = document.getElementById("judul");
 const output = document.getElementById("hasil");
 
@@ -24,3 +26,4 @@ dengan caranya sendiri.
 
   output.innerText = narasi;
 });
+</script>
