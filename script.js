@@ -1,14 +1,17 @@
 <script>
-  function generate() {
-   const button = document.getElementById("generateBtn");
+  function generate() const button = document.getElementById("generateBtn");
+const copyBtn = document.getElementById("copyBtn");
 const input = document.getElementById("judul");
 const output = document.getElementById("hasil");
+
+copyBtn.style.display = "none";
 
 button.addEventListener("click", () => {
   const judul = input.value.trim();
 
   if (judul === "") {
     output.innerText = "Tulis dulu judul atau idenya.";
+    copyBtn.style.display = "none";
     return;
   }
 
@@ -25,5 +28,16 @@ dengan caranya sendiri.
   `;
 
   output.innerText = narasi;
+  copyBtn.style.display = "block";
 });
+
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(output.innerText);
+  copyBtn.innerText = "Narasi disalin ✓";
+
+  setTimeout(() => {
+    copyBtn.innerText = "Salin Narasi";
+  }, 1500);
+});
+
 </script>
