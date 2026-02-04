@@ -21,5 +21,21 @@
   </div>
 
   <script src="script.js"></script>
+<script>
+  function generate() {
+    const input = document.getElementById("judul");
+    const output = document.getElementById("hasil");
+
+    if (input.value.trim() === "") {
+      output.innerText = "Tulis dulu idenya...";
+      return;
+    }
+
+    output.innerText =
+      "Kadang, " +
+      input.value +
+      ". Tapi yang jarang disadari, diam mereka adalah cara bertahan. Bukan karena lemah, tapi karena terlalu sering diminta kuat.";
+  }
+</script>
 </body>
 </html>
