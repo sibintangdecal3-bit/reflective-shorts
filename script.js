@@ -1,24 +1,26 @@
-function generate() {
-  const judul = document.getElementById("judul").value;
+const button = document.getElementById("generateBtn");
+const input = document.getElementById("judul");
+const output = document.getElementById("hasil");
 
-  if (!judul) {
-    alert("Isi judul dulu ya 🙂");
+button.addEventListener("click", () => {
+  const judul = input.value.trim();
+
+  if (judul === "") {
+    output.innerText = "Tulis dulu judul atau idenya.";
     return;
   }
 
   const narasi = `
-Kadang bukan hidup yang terlalu berat,
-tapi kita yang terlalu sering memendam.
+Kadang, ${judul}.
 
-"${judul}"
+Bukan karena tidak ingin bicara.
+Tapi karena lelah menjelaskan
+hal yang sering dianggap sepele.
 
-Tidak semua hal harus dijelaskan.
-Tidak semua luka harus dipamerkan.
-Yang penting, kamu tetap berjalan.
+Tidak semua diam berarti menyerah.
+Sebagian hanya sedang bertahan
+dengan caranya sendiri.
+  `;
 
-Simpan ini. 
-Kalau kamu sedang lelah, dengarkan lagi.
-`;
-
-  document.getElementById("hasil").innerText = narasi;
-}
+  output.innerText = narasi;
+});
