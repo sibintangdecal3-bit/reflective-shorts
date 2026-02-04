@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reflective Shorts</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Aplikasi Pertamaku</h1>
-  <p>Berhasil online 🎉</p>
-  <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./service-worker.js");
-  }
-</script>
 
+  <div class="app">
+    <h1>Reflective Shorts</h1>
+    <p class="subtitle">Narasi pendek. Dalam. Relevan.</p>
+
+    <textarea id="judul" placeholder="Tulis judul konten di sini..."></textarea>
+
+    <button onclick="generate()">Buat Narasi</button>
+
+    <div id="hasil" class="hasil"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
