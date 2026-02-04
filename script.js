@@ -1,5 +1,6 @@
 <script>
-  function generate() const generateBtn = document.getElementById("generateBtn");
+  function generate() 
+const generateBtn = document.getElementById("generateBtn");
 const narration = document.getElementById("narration");
 
 const drafts = [
@@ -12,5 +13,6 @@ generateBtn.addEventListener("click", function () {
   const random = Math.floor(Math.random() * drafts.length);
   narration.innerText = drafts[random];
 });
+
 
 </script>
