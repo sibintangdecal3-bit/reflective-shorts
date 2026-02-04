@@ -7,5 +7,11 @@
 <body>
   <h1>Aplikasi Pertamaku</h1>
   <p>Berhasil online 🎉</p>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js");
+  }
+</script>
+
 </body>
 </html>
